@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Film/Dizi Arama Motoru</title>
+  <link rel="stylesheet" href="FilmAramaMotoru.css"/>
+</head>
+<body>
+  <button class="tema-btn" onclick="temayiDegistir()" id="temaButonu">🌙</button>
+  <h1>🎥 Film/Dizi Arama Motoru</h1>
+  <div class="arama-alani">
+    <input type="text" id="aramaKutusu" placeholder="Film adı girin...">
+    <button onclick="filmAra()">Ara</button>
+  </div>
+
+  <h2>📽️ Arama Sonuçları</h2>
+  <div id="sonuclar"></div>
+
+  <h2>🎬 Film/Dizi Detayları</h2>
+  <div id="filmDetay"></div>
+
+  <h2>⭐ Favoriler</h2>
+  <div id="favoriler"></div>
+
+  <div id="yorumKutusu">
+    <h3 id="yorumFilmBaslik"></h3>
+    <textarea id="yorumInput" rows="4" placeholder="Yorumunuzu yazın..."></textarea>
+    <div class="yorum-butonlar">
+      <button onclick="yorumKutusuKapat()">İptal</button>
+      <button onclick="yorumKaydet()">Gönder</button>
+    </div>
+  </div>
+
+  <script src="FilmAramaMotoru.js"></script>
+</body>
+</html>

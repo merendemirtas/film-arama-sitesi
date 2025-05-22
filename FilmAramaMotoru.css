@@ -1,0 +1,166 @@
+:root {
+  --bg-color: #111;
+  --text-color: white;
+  --card-bg: #222;
+  --btn-bg: #f39c12;
+  --btn-color: black;
+}
+.light {
+  --bg-color: #f0f0f0;
+  --text-color: #111;
+  --card-bg: #fff;
+  --btn-bg: #2980b9;
+  --btn-color: white;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+input, button {
+  padding: 10px;
+  font-size: 16px;
+}
+#sonuclar, #favoriler {
+  max-width: 700px;
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin: 20px auto 0 auto;
+}
+h1, h2 {
+  text-align: center;
+}
+.film {
+  background-color: var(--card-bg);
+  padding: 10px;
+  border-radius: 10px;
+  width: 200px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.film:hover {
+  transform: scale(1.05);
+}
+.film img {
+  width: 100%;
+  border-radius: 5px;
+}
+.film h3 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+  text-align: center;
+}
+.favori-btn {
+  margin-top: 5px;
+  padding: 5px 10px;
+  background-color: var(--btn-bg);
+  border: none;
+  color: var(--btn-color);
+  cursor: pointer;
+  border-radius: 5px;
+}
+.tema-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+#filmDetay {
+  margin-top: 30px;
+  max-width: 700px;
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+#filmDetay img {
+  width: 200px;
+  float: left;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+#filmDetay::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.arama-alani {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.arama-alani input {
+  flex: 1;
+  max-width: 300px;
+}
+.puanlama span {
+  font-size: 22px;
+  cursor: pointer;
+  color: gray;
+  user-select: none;
+  margin: 0 2px;
+}
+.puanlama span.dolu {
+  color: gold;
+}
+#yorumKutusu {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--card-bg);
+  color: var(--text-color);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.7);
+  max-width: 400px;
+  z-index: 1000;
+}
+#yorumKutusu textarea {
+  width: 100%;
+  border-radius: 5px;
+  padding: 8px;
+}
+.yorum-butonlar {
+  margin-top: 10px;
+  text-align: right;
+}
+.yorum-butonlar button {
+  padding: 6px 12px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.yorum-butonlar button:last-child {
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+  border: none;
+  border-radius: 5px;
+}
